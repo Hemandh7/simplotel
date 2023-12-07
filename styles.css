@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff66b2, #ffff66);
+    background-size: cover; /* Ensure the background covers the entire viewport */
+}
+
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+nav {
+    background: white;
+    padding: 15px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mobile-icon {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 30px; 
+    margin-right: 20px; 
+    text-align: center;
+}
+
+.navbar-right {
+    width: 10%;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+}
+
+.icon {
+    width: 100%; 
+    height:100%;
+   font-size: 25px;
+   margin:0%;
+   padding: 0%;
+}
+
+.top-section {
+    height: 500px;
+    background: url('img1.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    width: 80%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff666b;
+    opacity: .8;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.overlay>h1 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.overlay>p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.lower-section {
+    text-align: center;
+    padding: 50px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lower-section h1 {
+    color: #fff;
+    font-size: 3em;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    padding: 25px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 0 35px 0 35px;
+    background-color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0 35px 0 0;
+}
+
+.card p {
+    background-color: #fff;
+    color: black;
+    margin: 0;
+    font-size: 15px;
+}
+.centered-button {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.order-button {
+    background-color: rgba(255, 255, 255, 0.77); 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar-left {
+        width: 90%;
+    }
+
+    .navbar-menu a {
+        font-size: 24px;
+    }
+
+    .overlay {
+        width: 25%;
+        left: 35%;
+    }
+
+    .card-container {
+        width: 60%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .navbar-menu a {
+        font-size: 20px;
+    }
+
+    .overlay {
+        width: 80%;
+        left: 50%;
+        padding: 15px;
+    }
+
+    .top-section {
+        height: 400px; 
+    }
+
+    .card-container {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 5%;
+    }
+}
+/* mobile */
+@media only screen and (max-width: 767px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .mobile-icon {
+        display: block;
+        margin: 10px 0; /* Adjust margin as needed */
+    }
+
+    .navbar-right {
+        flex-wrap: nowrap; /* Ensure icons stay in a single line */
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .navbar-menu a {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    .overlay {
+        width: 90%;
+        left: 50%;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .top-section {
+        height: 300px;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 90%;
+        gap: 5%;
+    }
+
+    .order-button {
+        font-size: 18px;
+    }
+}
